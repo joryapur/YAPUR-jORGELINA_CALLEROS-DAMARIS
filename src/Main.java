@@ -19,6 +19,38 @@ public class Main {
         System.out.println("lista");
         servicio.listarTodos();
 
+        //Con sql 
+
+        Odontologo1 odontologo = new Odontologo1(1,
+                "Maria",
+                "Perez",
+                654321
+               );
+
+        OdontologoServicio1 servicio = new OdontologoServicio1();
+
+        servicio.guardar(odontologo);
+
+        System.out.println("*****");
+        System.out.println(odontologo.toString());
+
+        Odontologo1 odontologo2 = new Odontologo1(2,
+                "Maria",
+                "Perez",
+                654321
+        );
+
+        OdontologoServicio1 odontologoServicio = new OdontologoServicio1();
+
+        servicio.guardar(odontologo2);
+
+        System.out.println("*****");
+        System.out.println(odontologo.toString());
+
+        servicio.listarTodos();
+
 
     }
+
+
 }
